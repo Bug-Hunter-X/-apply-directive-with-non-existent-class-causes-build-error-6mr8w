@@ -1,0 +1,24 @@
+The solution is to add the missing class to your Tailwind configuration or remove the reference in the `@apply` directive.  Here's the corrected HTML:
+
+```html
+<div class="bg-blue-500">
+</div>
+```
+
+Or, if you intend to use `text-red-600`, ensure it's included in your `tailwind.config.js` file's `content` array (or defined appropriately within your CSS if you're not using the JIT mode).
+
+Example of adding it to your content array (JIT mode):
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [ "./src/**/*.{js,jsx,ts,tsx,html}",
+  ], 
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+If you are not using JIT mode then you need to add the class definition to your main css file.
