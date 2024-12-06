@@ -1,0 +1,8 @@
+This error occurs when using Tailwind CSS's `@apply` directive with a utility class that doesn't exist.  For example:
+
+```html
+<div class="bg-blue-500 @apply text-red-600">
+</div>
+```
+
+If the class `text-red-600` is not defined in your Tailwind CSS configuration, this will cause a build error or unexpected behavior.  The error message may vary depending on your build setup, but it usually indicates an unknown or invalid class.
